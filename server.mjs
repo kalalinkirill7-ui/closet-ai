@@ -20,4 +20,11 @@ app.get('/api/health',(_req,res)=>res.json({ok:true,model:process.env.OPENAI_MOD
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-app.listen(port,()=>console.log(`Closet AI: http://localhost:${port}`));
+
+export default app;
+
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`Closet AI: http://localhost:${port}`);
+  });
+}
