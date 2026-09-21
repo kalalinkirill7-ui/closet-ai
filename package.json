@@ -1,0 +1,1 @@
+{"name":"closet-ai","version":"1.0.0","type":"module","scripts":{"start":"node server.mjs"},"dependencies":{"dotenv":"^17.2.2","express":"^5.1.0"}}
